@@ -1,6 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:get/get_core/get_core.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:h1/function/functions.dart';
 import 'package:h1/screens/studentdetails.dart';
 
@@ -24,9 +26,10 @@ class Gridlist extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: InkWell(
                         onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) =>
-                                  StudentDetails(stdetails: SD)));
+                          // Navigator.of(context).push(MaterialPageRoute(
+                          //     builder: (context) =>
+                          //         StudentDetails(stdetails: SD)));
+                          Get.to(()=>StudentDetails(stdetails: SD),transition: Transition.size,duration: Duration(milliseconds: 500));
                         },
                         child: Card(
                           color: const Color.fromARGB(255, 193, 228, 244),

@@ -1,6 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:get/get_core/get_core.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:h1/function/functions.dart';
 import 'package:h1/function/model.dart';
 import 'package:h1/screens/edit.dart';
@@ -112,11 +114,14 @@ class _SearchScreenState extends State<SearchScreen> {
                               ],
                             ),
                             onTap: () {
-                              Navigator.of(context)
-                                  .pushReplacement(MaterialPageRoute(
-                                builder: (ctr) =>
-                                    StudentDetails(stdetails: finduserItem),
-                              ));
+                              // Navigator.of(context)
+                              //     .pushReplacement(MaterialPageRoute(
+                              //   builder: (ctr) =>
+                              //       StudentDetails(stdetails: finduserItem),
+                              // ));
+
+                              Get.to(() =>
+                                  StudentDetails(stdetails: finduserItem),transition: Transition.zoom);
                             },
                           ),
                         );

@@ -1,6 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:get/get_core/get_core.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:h1/function/functions.dart';
 import 'package:h1/function/model.dart';
 import 'package:h1/screens/edit.dart';
@@ -58,9 +60,11 @@ class StudentList extends StatelessWidget {
                   ],
                 ),
                 onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (ctr) => StudentDetails(stdetails: student),
-                  ));
+                  // Navigator.of(context).push(MaterialPageRoute(
+                  //   builder: (ctr) => StudentDetails(stdetails: student),
+                  // ));
+
+                  Get.to(()=>StudentDetails(stdetails: student),transition:Transition.size,duration: Duration(microseconds: 700));
                 },
               ),
             );
