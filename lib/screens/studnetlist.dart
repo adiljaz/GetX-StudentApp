@@ -63,8 +63,9 @@ class StudentList extends StatelessWidget {
                   // Navigator.of(context).push(MaterialPageRoute(
                   //   builder: (ctr) => StudentDetails(stdetails: student),
                   // ));
+                  
 
-                  Get.to(()=>StudentDetails(stdetails: student),transition:Transition.size,duration: Duration(microseconds: 700));
+                  Get.to(()=>StudentDetails(stdetails: student),transition:Transition.size);
                 },
               ),
             );

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 import 'package:h1/function/functions.dart';
 import 'package:h1/function/model.dart';
 import 'package:image_picker/image_picker.dart';
@@ -65,7 +64,7 @@ class Addcontroller extends GetxController {
       );
     }
   }
-
+  
   Future<void> getimage(ImageSource source) async {
     final image = await ImagePicker().pickImage(source: source);
 
